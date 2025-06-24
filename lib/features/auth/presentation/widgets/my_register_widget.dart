@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+// ignore: must_be_immutable
 class MyRegisterWidget extends StatefulWidget {
   final double? radius;
   final double? width;

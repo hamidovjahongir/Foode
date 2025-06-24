@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:foode/core/extension/size_extension.dart';
 import 'package:foode/core/utils/app_colors.dart';
 import 'package:foode/core/utils/app_images.dart';
+import 'package:foode/core/utils/constants/app_text_style.dart';
 import 'package:foode/core/widget/my_button.dart';
 import 'package:foode/features/auth/presentation/pages/login_page.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class SecondPage extends StatefulWidget {
   const SecondPage({super.key});
@@ -35,21 +36,18 @@ class _SecondPageState extends State<SecondPage> {
                 children: [
                   Text(
                     'Foode',
-                    style: GoogleFonts.sourceSans3(
+                    style: AppTextStyles.s10w600.copyWith(
                       fontWeight: FontWeight.bold,
                       color: Colors.white,
                       fontSize: 33,
                     ),
                   ),
-                  SizedBox(height: 10),
+                  16.height,
                   Text(
                     'The best food ordering and delivery app of the century',
-                    style: GoogleFonts.sourceSans3(
-                      color: Colors.white,
-                      fontSize: 16,
-                    ),
+                    style: AppTextStyles.s16w600.copyWith(color: Colors.white),
                   ),
-                  SizedBox(height: 50),
+                  50.height,
                   MyButton(
                     onTap: () {
                       Navigator.push(
@@ -65,7 +63,7 @@ class _SecondPageState extends State<SecondPage> {
               ),
             ),
           ),
-          SizedBox(height: 55),
+          55.height,
         ],
       ),
     );

@@ -23,3 +23,7 @@ flutter:
   assets:
     - assets/svgs/
     - assets/images/
+fonts:
+    - family: Sen
+      fonts:
+        - asset: assets/fonts/Sen/Sen-VariableFont_wght.ttf

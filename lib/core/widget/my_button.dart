@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:foode/core/utils/app_colors.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:foode/core/utils/constants/app_text_style.dart';
 
 // ignore: must_be_immutable
 class MyButton extends StatefulWidget {
@@ -33,12 +32,13 @@ class _MyButtonState extends State<MyButton> {
   @override
   Widget build(BuildContext context) {
     return InkWell(
+      borderRadius: BorderRadius.circular(widget.radius ?? 30),
       onTap: () {
         if (widget.onTap != null) {
           widget.onTap!();
         }
       },
-      child: Container(
+      child: Ink(
         width: widget.width ?? MediaQuery.of(context).size.width * 0.9,
         height: widget.height ?? 50,
         decoration: BoxDecoration(
@@ -48,10 +48,9 @@ class _MyButtonState extends State<MyButton> {
         child: Center(
           child: Text(
             widget.title,
-            style: GoogleFonts.sourceSans3(
-              color: widget.titleColor ?? AppColors.red,
+            style: AppTextStyles.s18w600.copyWith(
+              color: widget.titleColor ?? Colors.white,
               fontWeight: FontWeight.bold,
-              fontSize: widget.fontSize ?? 18,
             ),
           ),
         ),
