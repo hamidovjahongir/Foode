@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:foode/core/extension/size_extension.dart';
+import 'package:foode/core/utils/app_colors.dart';
 
 class CustomTextFormField extends StatefulWidget {
   final String? labelText;
@@ -56,7 +57,7 @@ class CustomTextFormField extends StatefulWidget {
     this.obscureText = false,
     this.enabled = true,
     this.readOnly = false,
-    this.required = false,
+    this.required = true,
     this.maxLines = 1,
     this.minLines,
     this.maxLength,
@@ -157,7 +158,7 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
           Row(
             children: [
               Text(
-                widget.labelText!,
+                '    ${widget.labelText!}',
                 style:
                     widget.labelStyle ??
                     theme.textTheme.bodyMedium?.copyWith(
@@ -169,7 +170,7 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
                 Text(
                   ' *',
                   style: TextStyle(
-                    color: theme.colorScheme.error,
+                    color: AppColors.red,
                     fontWeight: FontWeight.bold,
                   ),
                 ),

@@ -95,9 +95,18 @@ class _RegisterPageState extends State<RegisterPage> {
                 ),
                 20.height,
 
-                MyButton(title: 'Sign in', color: AppColors.red, height: 60),
+                MyButton(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (x) => LoginPage()),
+                    );
+                  },
+                  title: 'Sign in',
+                  color: AppColors.red,
+                  height: 60,
+                ),
                 20.height,
-
                 Text(
                   'Forgot the password?',
                   style: AppTextStyles.s16w600.copyWith(),

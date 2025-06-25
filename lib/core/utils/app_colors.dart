@@ -8,6 +8,7 @@ class AppColors {
   static final neutralBlack = Color(0xff09101D);
   static final neutralWhite = Color(0xffEBEEF2);
   static final neutraOrange = Color(0xf394452);
+  
 
 
 

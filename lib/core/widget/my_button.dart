@@ -43,7 +43,12 @@ class _MyButtonState extends State<MyButton> {
         height: widget.height ?? 50,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(widget.radius ?? 35),
-          color: widget.color ?? Colors.blue,
+          // color: widget.color ?? Colors.blue,
+          gradient: LinearGradient(
+            colors: [Color(0xffFF7E95), Color(0xffFF1843)],
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+          ),
         ),
         child: Center(
           child: Text(
